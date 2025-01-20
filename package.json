@@ -8,6 +8,7 @@
     "preview": "vite preview",
     "deploy": "vite build && vite gh-pages",
     "format": "prettier --write .",
+    "generate-docs": "jsdoc -c jsdoc.json",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "author": "Dmitrii Kuznetsov",
@@ -21,9 +22,13 @@
   "description": "A Vue 3 project with infinite scroll and dynamic API loading.",
   "devDependencies": {
     "@eslint/js": "^9.18.0",
+    "better-docs": "^2.7.3",
     "eslint": "^8.40.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-jsdoc": "^50.6.2",
     "eslint-plugin-vue": "^9.32.0",
     "globals": "^15.14.0",
+    "jsdoc": "^4.0.4",
     "prettier": "^2.8.8",
     "sass-embedded": "^1.83.4",
     "terser": "^5.37.0",

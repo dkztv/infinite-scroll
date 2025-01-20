@@ -10,7 +10,27 @@
   </div>
 </template>
 
+<script setup lang="ts">
+/**
+ * SkeletonCard.vue
+ *
+ * A skeleton loader component used as a placeholder while actual data is being loaded.
+ *
+ * This component provides a visual representation of a user card with a photo
+ * and text placeholders. It uses CSS animations to fade in smoothly.
+ */
+</script>
+
 <style module lang="scss">
+/**
+ * Skeleton loader styles.
+ * @class skeleton - Main container for the skeleton loader.
+ * @class photoWrapper - Wrapper for the circular avatar placeholder.
+ * @class avatar - Placeholder for the user avatar.
+ * @class info - Wrapper for text placeholders.
+ * @class line - Placeholder for a longer text line.
+ * @class shortLine - Placeholder for a shorter text line.
+ */
 .skeleton {
   display: flex;
   align-items: center;

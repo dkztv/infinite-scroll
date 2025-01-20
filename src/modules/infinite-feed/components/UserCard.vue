@@ -1,7 +1,12 @@
 <template>
   <div :class="$style.card">
     <div :class="$style.photoWrapper">
-      <img :src="user.picture?.medium" :alt="user.name?.first" loading="lazy" />
+      <img
+        :src="user.picture?.medium"
+        :srcset="`${user.picture?.large} 2x`"
+        :alt="user.name?.first"
+        loading="lazy"
+      />
     </div>
     <div :class="$style.info">
       <p :class="$style.name">{{ user.name?.first }} {{ user.name?.last }}</p>
@@ -11,6 +16,13 @@
 </template>
 
 <script setup lang="ts">
+/**
+ * UserCard.vue
+ *
+ * Displays a user's profile card, including photo, name, and email.
+ *
+ * @param {User} user - The user object containing name, email, and picture.
+ */
 import { defineProps } from 'vue';
 import { User } from '@/modules/infinite-feed/types/user';
 
@@ -68,6 +80,9 @@ defineProps<{
   font-weight: bold;
   margin: 0;
   color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .email {
@@ -75,5 +90,8 @@ defineProps<{
   color: #555;
   margin: 5px 0 0;
   word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 </style>

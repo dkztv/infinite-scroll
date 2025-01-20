@@ -3,11 +3,13 @@ import { RandomUserApiResponse } from '@/modules/infinite-feed/types/user';
 const API_URL = 'https://randomuser.me/api/';
 
 /**
- * Получение пользователей из API.
- * @param page Номер страницы.
- * @param count Количество элементов на страницу.
- * @returns Данные с API в формате RandomUserApiResponse.
- * @throws Ошибка запроса.
+ * Fetch users from the Random User API.
+ * @async
+ * @function fetchUsersFromApi
+ * @param {number} page - The page number for paginated results.
+ * @param {number} count - The number of users to fetch per request.
+ * @returns {Promise<RandomUserApiResponse>} The API response containing user data.
+ * @throws Will throw an error if the request fails.
  */
 export const fetchUsersFromApi = async (
   page: number,

@@ -15,6 +15,9 @@ dist/
 .vscode/
 *.iml
 
+# Docs
+docs/
+
 # Logs
 npm-debug.log*
 yarn-debug.log*
