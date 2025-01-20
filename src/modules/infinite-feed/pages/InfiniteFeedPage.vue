@@ -7,7 +7,8 @@
     v-if="loadingState === 'loading'"
     name="skeleton-list"
     tag="div"
-    :class="[$style.cardList, $style.skeletonList]">
+    :class="[$style.cardList, $style.skeletonList]"
+  >
     <SkeletonCard v-for="n in count" :key="n" />
   </transition-group>
   <div v-if="loadingState === 'loading'" :class="$style.loader">Loading...</div>
