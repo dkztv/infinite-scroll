@@ -10,7 +10,7 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
-  base: 'https://github.com/dkztv/infinite-scroll',
+  base: 'https:///dkztv.github.io/infinite-scroll',
   build: {
     sourcemap: process.env.NODE_ENV !== 'production',
     rollupOptions: {
