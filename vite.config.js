@@ -1,14 +1,16 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import { fileURLToPath, URL } from 'node:url';
+import { ghPages } from 'vite-plugin-gh-pages';
 
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [vue(), ghPages()],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
+  base: 'https://github.com/dkztv/infinite-scroll',
   build: {
     sourcemap: process.env.NODE_ENV !== 'production',
     rollupOptions: {

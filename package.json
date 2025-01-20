@@ -6,6 +6,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "deploy": "vite build && vite gh-pages",
     "format": "prettier --write .",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
@@ -23,9 +24,10 @@
     "eslint": "^8.40.0",
     "eslint-plugin-vue": "^9.32.0",
     "globals": "^15.14.0",
+    "prettier": "^2.8.8",
     "sass-embedded": "^1.83.4",
     "terser": "^5.37.0",
-    "prettier": "^2.8.8",
-    "typescript-eslint": "^8.20.0"
+    "typescript-eslint": "^8.20.0",
+    "vite-plugin-gh-pages": "^1.0.1"
   }
 }
