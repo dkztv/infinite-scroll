@@ -65,23 +65,38 @@ The **Infinite Scroll Demo** is a simple Vue 3 application that showcases the im
 
 ```plaintext
 infinite-scroll/
-├── public/                # Static assets
 ├── src/
 │   ├── modules/
-│   │   └── infinite-feed/    # Infinite scroll module
-│   │       ├── api/          # API functions
-│   │       ├── components/   # Infinite scroll components
-│   │       ├── pages/        # Page components
-│   │       ├── stores/       # Pinia store
-│   │       ├── hooks/        # Custom hooks
-│   │       └── types/        # TypeScript type definitions
-│   ├── shared/           # Shared resources
-│   ├── App.vue           # Root Vue component
-│   └── main.ts           # Application entry point
-├── .eslintrc.js          # ESLint configuration
-├── jsdoc.json            # JSDoc configuration
-├── vite.config.ts        # Vite configuration
-└── package.json          # Project metadata and dependencies
+│   │   ├── infinite-feed/
+│   │   │   ├── api/
+│   │   │   │   └── userApi.ts          # API functions for fetching users
+│   │   │   ├── components/
+│   │   │   │   ├── SkeletonCard.vue   # Skeleton loader component
+│   │   │   │   └── UserCard.vue       # User card component
+│   │   │   ├── hooks/
+│   │   │   │   └── useInfiniteScroll.ts # Infinite scroll logic
+│   │   │   ├── pages/
+│   │   │   │   └── InfiniteFeedPage.vue # Main page component
+│   │   │   ├── stores/
+│   │   │   │   └── userStore.ts       # Pinia store for user data
+│   │   │   └── types/
+│   │   │       └── user.ts            # TypeScript type definitions for User
+│   ├── shared/
+│   │   └── utils/
+│   │       └── debounce.ts            # Utility function for debouncing
+│   ├── App.vue                         # Root Vue component
+│   ├── main.ts                         # Application entry point
+│   └── shims-vue.d.ts                  # TypeScript shim for Vue files
+├── .eslintrc.js                        # ESLint configuration
+├── .gitignore                          # Git ignore file
+├── .prettierrc                         # Prettier configuration
+├── index.html                          # HTML template
+├── jsdoc.json                          # JSDoc configuration
+├── package.json                        # Project metadata and dependencies
+├── package-lock.json                   # Locked dependencies
+├── README.md                           # Project documentation
+├── tsconfig.json                       # TypeScript configuration
+└── vite.config.js                      # Vite configuration
 ```
 
 ---
@@ -101,13 +116,13 @@ Provides a skeleton loader placeholder for better user experience during data fe
 The infinite scrolling functionality is implemented using a custom hook `useInfiniteScroll`. Here's how it works:
 
 1. **Dynamic Calculation**:
-    - Determines the number of items to fetch based on the current screen height.
+   - Determines the number of items to fetch based on the current screen height.
 
 2. **Scroll Event Listener**:
-    - Listens for scroll events and fetches new data when the user reaches near the bottom of the page.
+   - Listens for scroll events and fetches new data when the user reaches near the bottom of the page.
 
 3. **Debouncing**:
-    - Debounces the scroll events to avoid excessive API calls.
+   - Debounces the scroll events to avoid excessive API calls.
 
 ### Hook Implementation (`useInfiniteScroll.ts`):
 ```ts
@@ -180,7 +195,6 @@ npm run deploy
 ```bash
 npm run lint
 ```
-
 ---
 
 ## 💡 Future Improvements
