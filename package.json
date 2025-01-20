@@ -1,0 +1,31 @@
+{
+  "name": "infinite-scroll",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "format": "prettier --write .",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
+  },
+  "author": "Dmitrii Kuznetsov",
+  "license": "ISC",
+  "dependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "pinia": "^2.3.1",
+    "vite": "^6.0.7",
+    "vue": "^3.5.13"
+  },
+  "description": "A Vue 3 project with infinite scroll and dynamic API loading.",
+  "devDependencies": {
+    "@eslint/js": "^9.18.0",
+    "eslint": "^8.40.0",
+    "eslint-plugin-vue": "^9.32.0",
+    "globals": "^15.14.0",
+    "sass-embedded": "^1.83.4",
+    "terser": "^5.37.0",
+    "prettier": "^2.8.8",
+    "typescript-eslint": "^8.20.0"
+  }
+}

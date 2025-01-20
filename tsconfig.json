@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "strictNullChecks": false,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "preserve",
+    "skipLibCheck": true,
+    "useDefineForClassFields": true,
+    "target": "esnext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "lib": [
+      "ESNext",
+      "ESNext.AsyncIterable",
+      "DOM",
+      "dom.iterable",
+      "scripthost"
+    ],
+    "esModuleInterop": true,
+    "allowJs": true,
+    "sourceMap": false,
+    "strict": true,
+    "noEmit": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "~/*": ["./*"]
+    },
+    "types": ["@types/node", "webpack-env", "vite/client"]
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "tests/**/*.ts",
+    "tests/**/*.tsx"
+  ],
+  "exclude": ["node_modules"]
+}
